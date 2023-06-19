@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "tsc && node dist/server.js",
-    "dev": "nodemon server.ts",
+    "dev": "tsc && concurrently \"tsc -w\" \"nodemon dist/server.js\" ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Matias Gonzalez",
